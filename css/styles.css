@@ -1,0 +1,854 @@
+                    /*****     GENERAL PART     *****/
+
+/*** GLOBAL ***/
+:root{
+    --textColor: rgba(0, 0, 255, 1);
+}
+
+html {
+    margin:0;
+    padding:0;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    background: url("../public/img/background.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+body{
+    text-align: center;
+    align-items: center;
+}
+
+.partSeparator{
+    height: 0.20em;
+    background: radial-gradient(#fff, blue, purple, darkred, forestgreen);
+    width: 95%;
+    border: black;
+    border-radius: 1em;
+}
+
+video{
+    width: 85%;
+    border-radius: 1.5em;
+}
+
+button, #addPetLink{
+    color: #00E4FF;
+    text-transform: uppercase;
+    background-color: var(--textColor);
+    border: 0.25rem double black;
+    font-family: 'Rajdhani', sans-serif;
+    padding: 0.25rem 0.55rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.15em;
+}
+
+button:hover, #addPetLink:hover{
+    color: #fff;
+    background-color: rgba(155, 0, 90, 1);
+    cursor: grab;
+}
+
+section{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    font-family: 'Varela Round', sans-serif;
+}
+
+input, textarea{
+    border-radius: 0.25em;
+}
+
+select{
+    border-radius: 0.15em;
+}
+
+.block{
+    display: block;
+    margin-top: 0.25em;
+}
+
+
+
+/*** HEADER ***/
+header{
+    margin-bottom: 0.25em;
+    text-decoration: underline;
+}
+
+
+
+/*** TITLES ***/
+h1{
+    font-family: 'Potta One', cursive;
+    font-size: 2em;
+    text-decoration: underline double;
+    margin-bottom: 1.5em;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+}
+
+h2{
+    text-decoration: underline rgba(40, 160, 55, 0.5) wavy;
+    letter-spacing: 0.075rem;
+    word-spacing: 0.075rem;
+    text-shadow: 0.05em 0.05em 0.4em rgba(0, 0, 0, 1);
+}
+
+h3{
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+h4{
+    font-style: italic;
+    text-decoration: underline solid;
+}
+
+
+
+/***   NAVBAR   ***/
+nav{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-family: 'Fredoka One', cursive;
+}
+
+nav a{
+    display: inline-block;
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 0.25em double black;
+    border-radius: 2em;
+}
+
+nav a:hover{
+    color: rgba(255, 255, 255, 1);
+    border-radius: 1rem;
+    text-decoration: underline double white;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav > ul{
+    display: flex;
+}
+
+nav ul li{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+nav ul li a:hover{
+    background-size: contain;
+    background-color: #000;
+}
+
+nav ul ul{
+    z-index: 9999;
+    display: none;
+    position: absolute;
+}
+
+nav li:hover > ul{
+    margin-left: 0;
+    padding-left: 0;
+    display: block;
+    text-align: left;
+    cursor: move;
+}
+
+nav li:hover{
+    border-radius: 2em;
+}
+
+nav li:hover ul li{
+    transform: translate(0.5em, 10%);
+    background-color: black;
+    border-radius: 2em;
+}
+
+
+
+/*** FOOTER ***/
+#space{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+                    /*****     PAGES PART     *****/
+
+/*** HOME PAGE ***/
+#domain{
+    display: flex;
+    float: left;
+    text-align: left;
+    margin-left: 2.5%;
+    color: #ddd
+}
+
+#github{
+    display: flex;
+    float: left;
+    margin-left: 20%;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none
+}
+
+#github:hover{
+    color: lightgreen;
+    font-weight: 650;
+}
+
+#table{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.line{
+    border: 1rem solid rgba(50, 0, 255, 0.60);
+    padding: 0.5em;
+}
+
+.lineNoBottom{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.lineNoTop{
+    border-top: none;
+    padding-top: 0;
+}
+
+#total{
+    border-right: none;
+    padding-right: 0;
+    text-align: right;
+}
+
+#totalEndPhrase{
+    border-left: none;
+    padding-left: 0.25rem;
+    text-align: left;
+}
+
+
+
+/*** INTRODUCE PAGE ***/
+#homepageSection{
+    max-width: 75%;
+    line-height: 150%;
+    word-spacing: 0.15rem;
+}
+
+.homeTopPadding{
+    padding-top: 0.25em;
+}
+
+#infoCustom{
+    border: #0000cd 2px solid;
+    border-radius: 1em;
+}
+
+#javascript{
+    margin-top: 0.2em;
+    margin-bottom: 0;
+}
+
+#yearDiv{
+    float: left;
+    width: 50%;
+    margin-right: 1.5em;
+}
+
+#answerLetter{
+    text-align: left;
+}
+
+#answerYear{
+    text-align: right;
+}
+
+#year, #letter, #ageDog, #ageCat, #ageDegus, #userAnswer{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.25em;
+    width: 7em;
+    text-align: center;
+}
+
+#ageDogDiv {
+    float:left;
+    width:33%;
+}
+
+#ageCatDiv {
+    text-align: center;
+    display: inline-block;
+    margin:0 auto;
+    width:33%;
+}
+
+#ageDegusDiv {
+    float:right;
+    width:33%;
+}
+
+.purple{
+    font-size: 1.5em;
+    color : #9517CE;
+    font-family: 'Lobster', cursive;
+    font-weight: 900;
+}
+
+#userAnswer{
+    font-size: 1.5em;
+    font-family: 'Lobster', cursive;
+}
+
+#restNb, #scoreNb{
+    font-size: 1.2em;
+    color : #9517CE;
+    font-family: 'Lobster', cursive;
+    font-weight: 700;
+}
+
+.hidden{
+    display : none;
+    visibility: hidden;
+}
+
+.hiddenVisibility{
+    visibility: hidden;
+}
+
+#quote{
+    font-size: 0.5rem;
+    transition: background-color, font-size;
+    -webkit-transition: background-color 3500ms ease-out, font-size 2000ms ease-out;
+    -moz-transition: background-color 3500ms ease-out, font-size 2000ms ease-out;
+    -o-transition: background-color 3500ms ease-out, font-size 2000ms ease-out;
+    line-height: 75%;
+    border-radius: 0.25em;
+}
+
+#quote:hover {
+    transition: font-size 3000ms 0ms, background-color 3000ms;
+    background-color:rgba(150, 0, 100, 1);
+    font-size: 1.25rem;
+    border-radius: 0.25em;
+    line-height: 100%;
+    word-spacing: 0.35em;
+}
+
+#inQuote{
+    font-weight: bolder;
+}
+
+#result{
+    color: #0521AD;
+    background-color: #4C8142;
+    border-radius: 1em;
+}
+
+
+
+/*** PETS PAGE ***/
+.petGeneral{
+    background-image: url("../public/img/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 5em;
+}
+
+.icon{
+    padding-top: 0.5em;
+}
+
+.labelsTypo{
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.presentation{
+    text-decoration: underline dotted rgba(50, 0, 50, 0.4);
+}
+
+.name{
+    font-family: 'Harrington', cursive;
+    color: rgba(120, 0, 120, 1);
+    font-size: 2.2em;
+    font-weight: 900;
+}
+
+.infosTypo{
+    color: rgba(255, 0, 255, 1);;
+    border-radius: 0.2em;
+    background-color: rgba(0, 50, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#specialDog{
+    color: rgba(255, 0, 50, 1);
+}
+
+.blockPresentation{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.petSeparator{
+    height: 0.15em;
+    border: none;
+    background: radial-gradient(#00A4F1, #9B00FF, #00A4F1);
+    display: block;
+    width: 80%;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* --- EDIT and DEL --- */
+.changes{
+    background-image: url("../public/img/editPet.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    line-height: 200%;
+}
+
+.newForm{
+    font-family: "Franklin Gothic Light", cursive;
+}
+
+.newFormName{
+    font-family: Harrington, cursive;
+    font-weight: 900;
+    text-align: center;
+    color: var(--textColor);
+}
+
+.formNewAge{
+    height: 1em;
+    width: 3em;
+}
+
+.lineHeight{
+    line-height: 3rem;
+}
+
+textarea::-webkit-input-placeholder { text-align:center; color: rgba(75, 75, 75, 0.9)}
+textarea::-moz-placeholder { text-align:center; } /* firefox 19+ */
+textarea:-ms-input-placeholder { text-align:center; } /* ie */
+textarea:-moz-placeholder { text-align:center; }
+
+.allChangesTypo{
+    font-family: 'Corbel New', serif;
+    font-weight: bolder;
+}
+
+#hautDePage{
+    display: block;
+    width: fit-content;
+    margin: 1em auto;
+    padding: 0.25rem;
+    border: solid rgba(0, 0, 0, 1) 0.25rem;
+    text-decoration: none;
+    color: rgba(30, 0, 75, 1);
+    background-color: rgba(50, 205, 50, 1);
+    font-weight: 900;
+}
+
+#hautDePage:hover{
+    color: #fff
+}
+
+/*** ADD PET PAGE ***/
+.formAddPet, #submitAddPet{
+    margin-top: 0.75em;
+    justify-self: start;
+    max-width: 60%;
+    text-align: right;
+}
+
+.maleSterilized, .femaleSterilized{
+    margin-left: 2em;
+    margin-bottom: 0.7em;
+}
+
+.male, .female, .other{
+    margin-left: 2em;
+}
+
+
+/*** CONTACT PAGE ***/
+#underline{
+    color: rgba(0, 0, 0, 1);
+    text-decoration: underline double darkred;
+}
+
+#underline:hover{
+    color: darkred;
+    text-decoration: underline double black;
+}
+
+#blueNumber{
+    color: var(--textColor);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#submitAddCustomer{
+    margin-top: 0.20em;
+}
+
+label sup{
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.customerMessage{
+    box-shadow: inset 0.1rem 0.1rem rgba(0, 0, 0, 0.95);
+    text-align: left;
+}
+
+#contactTable{
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: solid 0.5em rgba(0, 0, 0, 1);
+    background-color: rgba(0, 255, 0, 0.4);
+}
+
+.tableMaxWidth{
+    width: 33%;
+    border-bottom: solid 0.15em rgba(0, 0, 0, 1);
+}
+
+.spanContactNames{
+    color: rgba(255, 0, 0, 1)
+}
+
+#submitDeleteCustomer{
+    margin-top: 0.4em;
+}
+
+
+
+/*** CONNECT PAGE ***/
+fieldset{
+    border: none;
+}
+
+#connectFieldset{
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(0, 255, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("../public/img/fondConnect.jpg");
+    background-size: cover;
+    border-radius: 5em;
+}
+
+.connect{
+    margin: 1em auto
+}
+
+
+
+
+
+                    /*****     RESPONSIVE PART     *****/
+
+/*** PERSONAL COMPUTER SCREEN ***/
+@media screen and (min-width: 1280px) {
+    /* GENERAL */
+    body{
+        width: 75%;
+        font-size: 125%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* PETS PAGE */
+    #changeability{
+        position: relative;
+        left: 25%;
+        text-align: right;
+    }
+    .articlePicture{
+        margin-top: auto;
+        margin-bottom: auto;
+        border-radius: 1.5em;
+    }
+    .picture{
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 25em;
+        max-height: 22em;
+        border-radius: 1.5em;
+    }
+    .maleSterilized{
+        margin-top: 0.5em;
+    }
+    .formOutDate{
+        max-width: 15%;
+    }
+
+    /* CONTACT PAGE */
+    iframe{
+        max-width: 85%;
+    }
+    .labelCustomer{
+        display: inline-block;
+    }
+    .labelCustomer, .inputCustomer{
+        width: 10em;
+        font-weight: bolder;
+        margin-top: 0.2em;
+        text-align: center;
+    }
+    .labelCustomer{
+        text-align: right;
+    }
+    #messageCustomer{
+        text-align: left;
+    }
+    #submitAddCustomer, #submitDeleteCustomer{
+        margin-left: 10rem;
+    }
+
+    /* CONNECT PAGE */
+    .connectLabel{
+        display: inline-block;
+        width: 20%;
+        float: end;
+        text-align: right;
+    }
+    .connectInput{
+        max-width: 15%;
+    }
+    #connectSubmit{
+        margin-top: 1em;
+    }
+}
+
+
+
+/*** TOUCH PAD ***/
+@media screen and (min-width: 780px) and (max-width: 1280px) {
+    /* GENERAL */
+    body{
+        width: 90%;
+        font-size: 115%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* HOMEPAGE */
+    .changes{
+        font-size: 95%;
+    }
+
+    /* INTRODUCE */
+    #yearDiv, #letterDiv, #ageDogDiv, #ageCatDiv, #ageDegusDiv{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    #answerLetter, #answerYear, #answerDog, #answerDegus{
+        text-align: center;
+    }
+
+    /* PETS PAGE */
+    .articlePicture{
+        margin-top: auto;
+        margin-bottom: auto;
+        border-radius: 1em;
+    }
+    .picture{
+        border-radius: 0.5em;
+        max-width: 17em;
+        box-sizing: border-box;
+    }
+
+    /* ADD PET PAGE */
+    .maleSterilized{
+        margin-top: 0.45em;
+    }
+    .formOutDate{
+        width: 34%;
+        max-width: 15%;
+    }
+
+    /* CONTACT PAGE */
+    iframe{
+        max-width: 90%;
+    }
+    .labelCustomer{
+        display: inline-block;
+        width: 8em;
+    }
+    .labelCustomer, .inputCustomer{
+        width: 10em;
+        font-weight: bolder;
+        margin-top: 0.2em;
+        text-align: center;
+    }
+    .labelCustomer{
+        font-weight: bolder;
+        text-align: right;
+    }
+    #messageCustomer{
+        text-align: left;
+    }
+    #submitAddCustomer, #submitDeleteCustomer{
+        margin-left: 9rem;
+    }
+
+    /* CONNECT PAGE */
+    .connectLabel{
+        display: inline-block;
+        width: 25%;
+        float: end;
+        text-align: right;
+    }
+    .connectInput{
+        max-width: 40%;
+    }
+    #connectSubmit{
+        margin-top: 1em;
+    }
+}
+
+
+
+/*** SMARTPHONE ***/
+@media screen and (max-width: 780px) {
+    /* GENERAL */
+    html{
+        line-height: 0.25em;
+        max-width: 100%;
+        font-size: 100%;
+    }
+    h1{
+        font-size: 110%;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        line-height: 1.2em;
+    }
+    h2{
+        text-shadow: none;
+    }
+    #logo{
+        margin-top: 0.5em;
+        width: 15%;
+    }
+    nav{
+        font-size: 75%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* HOMEPAGE */
+    #svg{
+        width: 100%;
+    }
+
+    /* INTRODUCE PAGE */
+    #yearDiv, #letterDiv, #ageDogDiv, #ageCatDiv, #ageDegusDiv{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    #answerLetter, #answerYear, #answerDog, #answerDegus{
+        text-align: center;
+    }
+
+    /* PETS PAGE */
+    .changes{
+        background-size: 100%;
+        background-position: top center;
+    }
+    .blockPresentation{
+        display: block;
+    }
+    .picture{
+        max-width: 15em;
+        border-radius: 1em 1em 0 0;
+    }
+    label{
+        display: block;
+        line-height: 0.75em;
+    }
+    input{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .br{
+        display: none;
+    }
+    .formOutDate{
+        width: 33%;
+    }
+    .petGeneral{
+        border-radius: 2em;
+    }
+
+    /* FORM ADD PETS PAGE */
+    .formAddPet, #submitAddPet{
+        justify-self: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+    #age, #dog, #cat, #degus, .maleSterilized, .femaleSterilized,
+    #month, #formYear, .male, .female, .other, #available{
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+    .female, .other, .femaleSterilized{
+        margin-top: 0.8em;
+        margin-bottom: 0;
+    }
+
+    /* CONTACT PAGE */
+    iframe{
+        max-width: 100%;
+        max-height: 20rem;
+    }
+    #connectFieldset {
+        max-width: 100%;
+    }
+    .labelCustomer{
+        font-weight: bold;
+    }
+    .inputCustomer{
+        text-align: center;
+    }
+    .supBold{
+        margin-top: 0.8em;
+    }
+    #contactTable {
+        font-size: 0.55em;
+        max-width: 100%;
+     }
+
+    /* CONNECT PAGE */
+}
